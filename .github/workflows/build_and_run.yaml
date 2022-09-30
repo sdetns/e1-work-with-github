@@ -14,4 +14,4 @@ jobs:
       run: |
         ls -la
         pwd
-        ./run.sh {{ MY_REPO_SECRET }} 
+        ./run.sh "{{ MY_REPO_SECRET }}" 
