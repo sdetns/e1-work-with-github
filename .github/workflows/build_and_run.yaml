@@ -10,7 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - run: |
-      ls -la
-      pwd
-      ./run.sh {{ MY_REPO_SECRET }} 
+    - name: run script
+      run: |
+        ls -la
+        pwd
+        ./run.sh {{ MY_REPO_SECRET }} 
