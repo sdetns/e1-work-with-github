@@ -3,7 +3,6 @@ name: Build and Parse Secret to it
 
 on:
   workflow_dispatch:
-    branches: [ "main" ]
 
 jobs:
   build:
