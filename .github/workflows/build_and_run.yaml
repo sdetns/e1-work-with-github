@@ -9,9 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     # my environment
+    - uses: actions/checkout@v3
     - env: 
         MY_SECRET: ${{ secrets.MY_REPO_SECRET }}
-    - uses: actions/checkout@v3
     - name: run script
       run: |
         ls -la
