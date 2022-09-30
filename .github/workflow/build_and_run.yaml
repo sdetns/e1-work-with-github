@@ -1,0 +1,16 @@
+
+name: Build and Parse Secret to it
+
+on:
+  workflow_dispatch:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: |
+      ls -la
+      pwd
+      ./run.sh {{ MY_REPO_SECRET }} 
