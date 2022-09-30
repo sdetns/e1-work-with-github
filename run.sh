@@ -1,6 +1,6 @@
  #!/bin/bash         
 
-echo "Hello, Automation Star!"
+echo "Hey, Automation Star!"
 
 whoami
 
