@@ -1,0 +1,36 @@
+name: Build and Parse Secret to it
+
+# EVENT
+on:
+  workflow_dispatch:
+
+# ENVIRONMENT
+env:
+  MY_SECRET: ${{ secrets.MY_REPO_SECRET }}
+
+# JOBS
+jobs:
+  #JOB1
+  build:
+    # RUNNER
+    runs-on: ubuntu-latest
+
+    # STEPS
+    steps:
+      # STEP1
+      - uses: actions/checkout@v3
+
+      # STEP2
+      - name: run script
+        run: ls -la
+
+  # JOB 2
+  run:
+    runs-on: ubunto-latest
+
+    steps:
+      - name: Run the script
+        run: |
+          pwd
+          ./run.sh "$MY_SECRET"
+        # ${{ env.MY_SECRET }}
