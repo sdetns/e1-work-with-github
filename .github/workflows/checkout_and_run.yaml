@@ -34,4 +34,3 @@ jobs:
         run: |
           pwd
           ./run.sh "$MY_SECRET"
-        # ${{ env.MY_SECRET }}
