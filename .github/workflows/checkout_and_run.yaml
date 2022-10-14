@@ -2,6 +2,7 @@ name: Build and Parse Secret to it
 
 # EVENT
 on:
+  push:
   workflow_dispatch:
 
 # ENVIRONMENT
