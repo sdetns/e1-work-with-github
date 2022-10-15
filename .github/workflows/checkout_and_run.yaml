@@ -27,7 +27,7 @@ jobs:
 
   # JOB 2
   run:
-    runs-on: ubunto-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Run the script
