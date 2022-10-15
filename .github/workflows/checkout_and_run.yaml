@@ -19,9 +19,6 @@ jobs:
     # STEPS
     steps:
       # STEP1
-      - uses: actions/checkout@v3
-
-      # STEP2
       - name: run script
         run: ls -la
 
@@ -30,6 +27,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # STEP1
+      - uses: actions/checkout@v3
+      
+      # STEP2
       - name: Run the script
         run: |
           pwd
