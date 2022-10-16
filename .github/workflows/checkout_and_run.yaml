@@ -4,6 +4,7 @@ name: Build and Parse Secret to it
 on:
   push:
   workflow_dispatch:
+  repository_dispatch:
 
 # ENVIRONMENT
 env:
