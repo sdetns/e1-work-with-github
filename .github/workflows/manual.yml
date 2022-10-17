@@ -5,7 +5,7 @@ name: Manual workflow
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
-  workflow_dispatch:
+  repository_dispatch:
     # Inputs the workflow accepts.
     inputs:
       name:
@@ -19,12 +19,35 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
-  greet:
+   greet:
+  
+     strategy:
+       matrix:
+        os: [ubuntu-latest, macos-latest]
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
+     steps:
     # Runs a single command using the runners shell
-    - name: Send greeting
-      run: echo "Hello ${{ github.event.inputs.name }}"
+     - name: Send greeting
+       run: echo "Hello ${{ github.event.inputs.name }}"
+       
+     meet:
+    # TODO job dependency
+       runs-on: ubuntu-latest
+       steps:
+       - name: Diskutieren
+         run: echo "Diskutieren"
+         
+       - name: Checkout
+       uses: actions/checkout@v2.5.0
+    
+    # TODO use a github action from the marketplace
+    
+     bye:
+    # TODO job dependency
+        runs-on: ubuntu-latest
+        steps: 
+        - name: Say bye
+          run: echo "Tschüss"
