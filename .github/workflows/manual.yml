@@ -33,19 +33,19 @@ jobs:
      - name: Send greeting
        run: echo "Hello ${{ github.event.inputs.name }}"
        
-     meet:
+   meet:
     # TODO job dependency
-       runs-on: ubuntu-latest
-       steps:
+     runs-on: ubuntu-latest
+     steps:
        - name: Diskutieren
          run: echo "Diskutieren"
          
        - name: Checkout
-       uses: actions/checkout@v2.5.0
+         uses: actions/checkout@v2.5.0
     
     # TODO use a github action from the marketplace
     
-     bye:
+   bye:
     # TODO job dependency
         runs-on: ubuntu-latest
         steps: 
